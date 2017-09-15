@@ -4,7 +4,7 @@ author: "Jagannath Gharpure"
 date: "September 11, 2017"
 output: html_document
 ---
-##Introduction
+## Introduction
 Eduardo Velloso et. al. in their paper titled "Qualitative Activity Recognition of Weight Lifting Exercises",illustrate their approach on the example problem of qualitatively assessing and providing feedback on weight lifting exercises. The researchers collected the data from accelerometers on the belt, forearm, arm, and dumbell of 6 research study participants. The training data consists of accelerometer data and a label identifying the quality of the activity the participant was doing (column name is classe). The second data set;i.e., the testing data consists of accelerometer data BUT WITHOUT the identifying label (classe column not provided). The objective of this project is to predict the labels (A B C D and E) for the 20 test set observations in the test data.
 
 
@@ -48,7 +48,7 @@ Here, we first read the two files, for training data and test data.  Then we rep
       pmlTrainData1 <- pmlTrainData[inTrain, ]
       pmlTrainData2ForValidation <- pmlTrainData[-inTrain, ]
 ```
-##Model Fitting
+## Model Fitting
 I initially train the model on the subset training data and validate using the validation set (i.e. I do prediction on this validation data set).  This is done to estimate the out of samnple error.  I chose adaptive_CV  (Cross Validation) method even though this is experimental method per the help file for the function trainControl.  I found the adaptive_CV to be very effective in choosing optimal models (for Random Forest method "rf").  I used confusion matrix to estimate "out of sample error"" after I ran the fitted model on the validation set.  It was acceptable.
 ```{r fitModel , cache=TRUE}
 
@@ -67,7 +67,7 @@ predictOnValData <- predict(fit, newdata=pmlTrainData2ForValidation)
 confusionMatrix(pmlTrainData2ForValidation$classe, predictOnValData)
 ```
 
-##Final Model
+## Final Model
 Since the random forest model works very well (with adaptive_CV training control) as evdienced by accuracy and estimates of out of sample error I decided to use this as my final model , rather than use any other methods or models.  So I decided to use the COMPLETE training set to train the model (possibly for better accuracy) and then I  use it to predict on the test data set of the 20 observations. After predicting "classe" for the 20 observations I write the answers to 20 files.  Each file name is the problem#.  I also write ALL answers in one file named allAnswers.tx.  It makes easy for me to look at this "all answers file" (that has problem # and the answer) and then select the answers in quiz without missing the order while selecitng
 
 ```{r fitModelOnTotalTrainData , cache=TRUE}
