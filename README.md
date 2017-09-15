@@ -18,4 +18,4 @@ The .Rmd file is in the master branch. [To open in new tab, please Right Click h
 The knitr produced HTML file is in the gh-pages branch. [To open in new tab, please Right Click here for HTML output file](https://jtgharp.github.io/FinalProjectMachineLearning/)    
 
 (3) 
-All the naswers are in the file named allanswers.txt.  [Click here for all answers](https://github.com/jtgharp/FinalProjectMachineLearning/blob/master/allanswers.txt)  
+All the naswers are in the file named allanswers.txt.  [To open in new tab, please Righ Click here for all answers](https://github.com/jtgharp/FinalProjectMachineLearning/blob/master/allanswers.txt)  
