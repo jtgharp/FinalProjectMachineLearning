@@ -6,7 +6,7 @@ In this repository I have included three submission files;
   I was not sure if I should include this last file. But just wanted to make sure that I do not lose any points in grading by my peers so including it.
   
   # Note
-While clicking each link above if you right click to open in separate tabs i your browser then you can open each in two separate tabs and compare the code in the .Rmd file with the out put generated in the Knitr produced HTML file.  
+While clicking each link below you  can right-click  each to open in separate tabs in your browser.  This way you do not have to keep clicking back arrow on your browser.
 
 # Locations of the submission files
 (1) 
